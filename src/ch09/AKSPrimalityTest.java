@@ -14,8 +14,8 @@ public class AKSPrimalityTest {
             System.out.println(n + " Bukan Bilangan Prima");
     }
 
-    static long x[] = new long[1000];
-    static void coef(int n) {
+    public static long x[] = new long[1000];
+    public static void coef(int n) {
         x[0] = 1;
         for (int i = 0; i < n; x[0] = -x[0], i++) {
             x[1 + i] = 1;
@@ -25,7 +25,7 @@ public class AKSPrimalityTest {
         }
     }
 
-    static boolean isPrime(int n) {
+    public static boolean isPrime(int n) {
         coef(n);
         x[0]++;
         x[n]--;
